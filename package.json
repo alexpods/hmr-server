@@ -1,0 +1,8 @@
+{
+  "package": "hmr-server",
+  "version": "0.0.0",
+  "description": "Server for hmr",
+  "dependencies": {
+    "ws": "^0.8.0"
+  }
+}
