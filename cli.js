@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var commander     = require('commander');
 var WatchRemotely = require('./index');
 
@@ -6,7 +8,7 @@ var options     = null;
 var remoteWatch = null;
 
 commander
-  .version('0.0.0')
+  .version('0.1.0')
   .usage('[options] <paths ...>')
   .option('-P, --port <port>', 'Port for web socket server')
   .option('-H, --host <host>', 'Host for web socket server')
