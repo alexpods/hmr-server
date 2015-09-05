@@ -2,6 +2,9 @@
   "package": "watch-remotely",
   "version": "0.1.0",
   "description": "Watch file system changes through web socket connection",
+  "license": "MIT",
+  "author": "Aleksey Podskrebyshev <alexpods>",
+  "repository": "https://github.com/alexpods/watch-remotely",
   "bin": {
     "watch-remotely": "./cli.js"
   },
