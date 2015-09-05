@@ -99,11 +99,11 @@ describe('WatchRemotely', function() {
       remoteWatch.run();
 
       expect(fakeWs.on.calledWithMatch('connection')).to.equal(true);
-      expect(fakeWs.listenerCount('connection')).to.equal(1);
+      expect(fakeWs.listeners('connection').length).to.equal(1);
 
       ['add', 'change', 'unlink', 'addDir', 'unlinkDir'].forEach(function(event) {
         expect(fakeWatcher.on.calledWith(event)).to.equal(true);
-        expect(fakeWatcher.listenerCount(event)).to.equal(1);
+        expect(fakeWatcher.listeners(event).length).to.equal(1);
       })
     });
 
@@ -249,18 +249,18 @@ describe('WatchRemotely', function() {
     });
 
     it('should stop listen to the web socket server and watcher events', function() {
-      expect(fakeWs.listenerCount('connection')).to.equal(1);
+      expect(fakeWs.listeners('connection').length).to.equal(1);
 
       ['add', 'change', 'unlink', 'addDir', 'unlinkDir'].forEach(function(event) {
-        expect(fakeWatcher.listenerCount(event)).to.equal(1);
+        expect(fakeWatcher.listeners(event).length).to.equal(1);
       });
 
       remoteWatch.stop();
-
-      expect(fakeWs.listenerCount('connection')).to.equal(0);
+      
+      expect(fakeWs.listeners('connection').length).to.equal(0);
 
       ['add', 'change', 'unlink', 'addDir', 'unlinkDir'].forEach(function(event) {
-        expect(fakeWatcher.listenerCount(event)).to.equal(0);
+        expect(fakeWatcher.listeners(event).length).to.equal(0);
       });
     });
 
