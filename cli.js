@@ -8,7 +8,7 @@ var options     = null;
 var remoteWatch = null;
 
 commander
-  .version('0.1.0')
+  .version('0.1.1')
   .usage('[options] <paths ...>')
   .option('-P, --port <port>', 'Port for web socket server')
   .option('-H, --host <host>', 'Host for web socket server')
