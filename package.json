@@ -1,5 +1,5 @@
 {
-  "package": "watch-remotely",
+  "name": "watch-remotely",
   "version": "0.1.0",
   "description": "Watch file system changes through web socket connection",
   "license": "MIT",
